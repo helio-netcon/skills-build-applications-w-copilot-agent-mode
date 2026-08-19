@@ -2,7 +2,12 @@ import { useApiCollection } from '../api.js'
 import ResourceState from './ResourceState.jsx'
 
 export default function Workouts() {
-  const { data: workouts, error, loading } = useApiCollection('/api/workouts/', 'workouts')
+  const endpoint = import.meta.env.DEV
+    ? '/api/workouts/'
+    : import.meta.env.VITE_CODESPACE_NAME
+    ? `https://${import.meta.env.VITE_CODESPACE_NAME}-8000.app.github.dev/api/workouts/`
+    : 'http://localhost:8000/api/workouts/'
+  const { data: workouts, error, loading } = useApiCollection(endpoint, 'workouts')
 
   return (
     <section>

@@ -2,7 +2,12 @@ import { useApiCollection } from '../api.js'
 import ResourceState from './ResourceState.jsx'
 
 export default function Teams() {
-  const { data: teams, error, loading } = useApiCollection('/api/teams/', 'teams')
+  const endpoint = import.meta.env.DEV
+    ? '/api/teams/'
+    : import.meta.env.VITE_CODESPACE_NAME
+    ? `https://${import.meta.env.VITE_CODESPACE_NAME}-8000.app.github.dev/api/teams/`
+    : 'http://localhost:8000/api/teams/'
+  const { data: teams, error, loading } = useApiCollection(endpoint, 'teams')
 
   return (
     <section>

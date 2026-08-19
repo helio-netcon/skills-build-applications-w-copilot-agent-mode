@@ -2,7 +2,12 @@ import { useApiCollection } from '../api.js'
 import ResourceState from './ResourceState.jsx'
 
 export default function Leaderboard() {
-  const { data: entries, error, loading } = useApiCollection('/api/leaderboard/', 'leaderboard')
+  const endpoint = import.meta.env.DEV
+    ? '/api/leaderboard/'
+    : import.meta.env.VITE_CODESPACE_NAME
+    ? `https://${import.meta.env.VITE_CODESPACE_NAME}-8000.app.github.dev/api/leaderboard/`
+    : 'http://localhost:8000/api/leaderboard/'
+  const { data: entries, error, loading } = useApiCollection(endpoint, 'leaderboard')
 
   return (
     <section>
