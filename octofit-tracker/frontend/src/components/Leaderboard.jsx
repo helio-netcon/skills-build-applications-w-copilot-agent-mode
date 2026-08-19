@@ -2,7 +2,7 @@ import { useApiCollection } from '../api.js'
 import ResourceState from './ResourceState.jsx'
 
 export default function Leaderboard() {
-  const { data: entries, error, loading } = useApiCollection('leaderboard', 'leaderboard')
+  const { data: entries, error, loading } = useApiCollection('/api/leaderboard/', 'leaderboard')
 
   return (
     <section>

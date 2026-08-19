@@ -2,7 +2,7 @@ import { useApiCollection } from '../api.js'
 import ResourceState from './ResourceState.jsx'
 
 export default function Teams() {
-  const { data: teams, error, loading } = useApiCollection('teams', 'teams')
+  const { data: teams, error, loading } = useApiCollection('/api/teams/', 'teams')
 
   return (
     <section>

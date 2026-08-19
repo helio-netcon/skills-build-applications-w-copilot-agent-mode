@@ -2,7 +2,7 @@ import { useApiCollection } from '../api.js'
 import ResourceState from './ResourceState.jsx'
 
 export default function Workouts() {
-  const { data: workouts, error, loading } = useApiCollection('workouts', 'workouts')
+  const { data: workouts, error, loading } = useApiCollection('/api/workouts/', 'workouts')
 
   return (
     <section>

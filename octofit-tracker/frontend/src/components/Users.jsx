@@ -2,7 +2,7 @@ import { useApiCollection } from '../api.js'
 import ResourceState from './ResourceState.jsx'
 
 export default function Users() {
-  const { data: users, error, loading } = useApiCollection('users', 'users')
+  const { data: users, error, loading } = useApiCollection('/api/users/', 'users')
 
   return (
     <section>
