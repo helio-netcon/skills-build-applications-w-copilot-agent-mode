@@ -182,3 +182,28 @@
     border-right-color: var(--border);
   }
 }
+
+.app-shell { min-height: 100vh; }
+.app-header { background: #123b40; color: #fff; padding: 1rem 0; }
+.brand { align-items: center; display: flex; font-family: var(--heading); font-size: 1.25rem; font-weight: 700; gap: .65rem; }
+.brand img { height: 34px; width: 34px; }
+.status-indicator { background: #d8ef6e; border-radius: 999px; color: #173b36; font-size: .78rem; font-weight: 700; padding: .35rem .65rem; text-transform: uppercase; }
+.app-nav { background: #fff; border-bottom: 1px solid #dbe5e2; }
+.nav-scroller { display: flex; overflow-x: auto; }
+.app-nav .nav-link { border-bottom: 3px solid transparent; color: #50666a; padding: .85rem 1rem .7rem; white-space: nowrap; }
+.app-nav .nav-link.active { border-bottom-color: #e85d3f; color: #163e43; font-weight: 700; }
+h1 { color: #123b40; font-size: 2rem; letter-spacing: 0; margin: 0; }
+h2 { color: #123b40; font-size: 1.15rem; letter-spacing: 0; margin: 0; }
+.page-intro { color: #617579; margin: .45rem 0 1.8rem; }
+.table { --bs-table-bg: transparent; border-color: #dbe5e2; }
+.table th { color: #617579; font-size: .75rem; text-transform: uppercase; }
+.rank { background: #fbd790; border-radius: 50%; color: #5a4106; display: inline-grid; font-weight: 700; height: 2rem; place-items: center; width: 2rem; }
+.team-card, .workout-card { background: #fff; border: 1px solid #dbe5e2; border-radius: 8px; height: 100%; padding: 1.35rem; }
+.team-card p { color: #617579; margin: .65rem 0 1rem; }
+.member-list { display: flex; flex-wrap: wrap; gap: .45rem; }
+.member-chip { background: #e5f1ef; border-radius: 999px; color: #1d565a; font-size: .82rem; padding: .3rem .6rem; }
+.eyebrow { color: #d04d32; font-size: .75rem; font-weight: 700; margin: 0 0 .25rem; text-transform: uppercase; }
+.duration { background: #e5f1ef; color: #1d565a; font-size: .8rem; font-weight: 700; padding: .3rem .5rem; white-space: nowrap; }
+.difficulty { color: #617579; font-size: .9rem; margin: .85rem 0; }
+.workout-card ol { color: #425b5f; margin: 0; padding-left: 1.25rem; }
+.workout-card li + li { margin-top: .35rem; }
